@@ -26,3 +26,5 @@ jobs:
           clean: true
           keep_files: true
           commit_message: 'Update GitHub Pages'
+          publish_domain: niketl16.github.io
+          publish_path: /niket-lekaria-website
