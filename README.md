@@ -1,4 +1,4 @@
-# Knock Knock's Personal Website
+# Niket Lekaria's Personal Website
 
 A modern and responsive personal website built with React and Tailwind CSS.
 

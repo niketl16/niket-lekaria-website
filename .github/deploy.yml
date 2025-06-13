@@ -23,3 +23,6 @@ jobs:
           publish_dir: ./build
           publish_branch: master
           force_orphan: true
+          clean: true
+          keep_files: true
+          commit_message: 'Update GitHub Pages'
