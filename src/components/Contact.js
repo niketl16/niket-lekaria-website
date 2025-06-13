@@ -101,19 +101,25 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Or find me on</h3>
             <div className="flex justify-center gap-8">
               <a
-                href="#"
+                href="https://github.com/niketl16"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <i className="fab fa-github text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/in/niket-lekaria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <i className="fab fa-linkedin text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://twitter.com/niket_lekaria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <i className="fab fa-twitter text-2xl"></i>

@@ -14,9 +14,9 @@ const About = () => {
   };
 
   const item = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     show: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -24,6 +24,15 @@ const About = () => {
         stiffness: 100
       }
     }
+  };
+
+  // Split text into words for hover highlighting
+  const highlightText = (text) => {
+    return text.split(' ').map((word, index) => (
+      <span key={index} className="hover:font-bold transition-all duration-300">
+        {word}{' '}
+      </span>
+    ));
   };
 
   return (
@@ -45,7 +54,7 @@ const About = () => {
             variants={item}
             className="text-xl text-gray-600"
           >
-            I'm Niket Lekaria, a passionate software engineer with expertise in Java, AWS, and Kafka. I thrive on solving complex problems and creating scalable solutions.
+            {highlightText("I'm Niket Lekaria, a passionate software engineer with expertise in Java, AWS, and Kafka. I thrive on solving complex problems and creating scalable solutions.")}
           </motion.p>
         </motion.div>
 
@@ -79,9 +88,9 @@ const About = () => {
                   <span className="text-sm text-gray-500">2020 - 2022</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Developed scalable Java applications using Spring Boot framework</li>
-                  <li>Implemented AWS services for cloud deployment and infrastructure management</li>
-                  <li>Worked on Kafka-based event-driven architecture for real-time data processing</li>
+                  {highlightText("Developed scalable Java applications using Spring Boot framework")}
+                  {highlightText("Implemented AWS services for cloud deployment and infrastructure management")}
+                  {highlightText("Worked on Kafka-based event-driven architecture for real-time data processing")}
                 </ul>
               </motion.div>
 
@@ -98,9 +107,9 @@ const About = () => {
                   <span className="text-sm text-gray-500">2022 - Present</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Lead development of microservices architecture using Java and Spring Cloud</li>
-                  <li>Implemented CI/CD pipelines using Jenkins and GitHub Actions</li>
-                  <li>Mentored junior developers and led technical design discussions</li>
+                  {highlightText("Lead development of microservices architecture using Java and Spring Cloud")}
+                  {highlightText("Implemented CI/CD pipelines using Jenkins and GitHub Actions")}
+                  {highlightText("Mentored junior developers and led technical design discussions")}
                 </ul>
               </motion.div>
             </motion.div>
@@ -134,9 +143,9 @@ const About = () => {
                   <span className="text-sm text-gray-500">2016 - 2020</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Graduated with honors</li>
-                  <li>Active participant in technical clubs and hackathons</li>
-                  <li>Completed multiple industry-relevant projects</li>
+                  {highlightText("Graduated with honors")}
+                  {highlightText("Active participant in technical clubs and hackathons")}
+                  {highlightText("Completed multiple industry-relevant projects")}
                 </ul>
               </motion.div>
             </motion.div>
@@ -162,35 +171,35 @@ const About = () => {
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-600">•</span>
-                  <span>Java & Spring Boot</span>
+                  <span className="hover:font-bold transition-all duration-300">Java & Spring Boot</span>
                 </motion.div>
                 <motion.div 
                   variants={item}
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-600">•</span>
-                  <span>AWS Cloud Services</span>
+                  <span className="hover:font-bold transition-all duration-300">AWS Cloud Services</span>
                 </motion.div>
                 <motion.div 
                   variants={item}
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-600">•</span>
-                  <span>Apache Kafka</span>
+                  <span className="hover:font-bold transition-all duration-300">Apache Kafka</span>
                 </motion.div>
                 <motion.div 
                   variants={item}
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-600">•</span>
-                  <span>Microservices Architecture</span>
+                  <span className="hover:font-bold transition-all duration-300">Microservices Architecture</span>
                 </motion.div>
                 <motion.div 
                   variants={item}
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-600">•</span>
-                  <span>CI/CD Pipelines</span>
+                  <span className="hover:font-bold transition-all duration-300">CI/CD Pipelines</span>
                 </motion.div>
               </motion.div>
             </motion.div>
