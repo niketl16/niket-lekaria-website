@@ -16,12 +16,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
-          publish_domain: niketl16.github.io
-          publish_path: /niket-lekaria-website
-          commit_message: 'Update GitHub Pages'
-          keep_files: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
